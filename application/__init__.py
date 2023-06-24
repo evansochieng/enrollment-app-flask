@@ -5,10 +5,5 @@ from flask import Flask
 # __name__ is the special name for the current application/variable being rendered
 app = Flask(__name__)
 
-# create simple routes
-# @ is a decorator
-@app.route("/")
-@app.route("/index")
-
-def index():
-    return "<h1>Hello, Evans! This is a first great step!</h1>"
+# import the routes file with the routing patterns
+from application import routes
