@@ -4,7 +4,22 @@ from flask import render_template
 # @ is a decorator
 @app.route("/")
 @app.route("/index")
-
+@app.route("/home")
 def index():
     # render html template from templates folder
-    return render_template("index.html")
+    return render_template("index.html", login=True)
+
+@app.route("/login")
+def login():
+    # render html template from templates folder
+    return render_template("login.html", login=True)
+
+@app.route("/courses")
+def courses():
+    # render html template from templates folder
+    return render_template("course.html", login=True)
+
+@app.route("/register")
+def register():
+    # render html template from templates folder
+    return render_template("register.html", login=True)
