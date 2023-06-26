@@ -7,19 +7,19 @@ from flask import render_template
 @app.route("/home")
 def index():
     # render html template from templates folder
-    return render_template("index.html", login=True)
+    return render_template("index.html")
 
 @app.route("/login")
 def login():
     # render html template from templates folder
-    return render_template("login.html", login=True)
+    return render_template("login.html")
 
 @app.route("/courses")
 def courses():
     # render html template from templates folder
-    return render_template("course.html", login=True)
+    return render_template("courses.html")
 
 @app.route("/register")
 def register():
     # render html template from templates folder
-    return render_template("register.html", login=True)
+    return render_template("register.html")
